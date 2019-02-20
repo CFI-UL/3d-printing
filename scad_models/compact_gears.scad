@@ -1,4 +1,4 @@
-use <mcad/gears.scad>
+use <mcad/involute_gears.scad>
 
 hole_diameter = 12;
 full_length = 100;
@@ -19,18 +19,15 @@ echo("lg_teeth", lg_teeth);
 echo("sm_teeth", sm_teeth);
 echo("ratio", lg_teeth / sm_teeth);
 
-
 difference() {
     union() {
-        linear_extrude(max_height / 3, center=true) {
-            gear(lg_teeth, circular_pitch);
-        }
+        gear(number_of_teeth=lg_teeth, 
+        circular_pitch=circular_pitch,
+        rim_width=max_height / 3, circles=5);
 
         translate([0, 0, max_height / 3 + 1 ]) {
             rotate([0, 0, 0]) {
-                linear_extrude(max_height / 3 * 2, center=true) {
-                    gear(sm_teeth, circular_pitch=circular_pitch);
-                }
+              gear(sm_teeth, circular_pitch=circular_pitch);
             }
         }
     }

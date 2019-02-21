@@ -5,7 +5,7 @@ block_width = 50;
 block_height = 30;
 dovetail_radius_female = 10;
 dovetail_radius_male = 9;
-pin_height = block_height / 2;
+pin_height = 75;
 pin_diameter = 10;
 holder_diameter = pin_diameter / 2;
 holder_height = pin_height + 5;
@@ -39,10 +39,10 @@ module dovetail() {
 }
 
 module holder() {
-    cylinder(holder_height - 4, d1=holder_diameter, d2=holder_diameter-1);
+    cylinder(5, d1=holder_diameter, d2=holder_diameter-1);
     cylinder(2, d=pin_diameter + 5);
     
 }
     
-dovetail();
+rotate([90, 0, 0]) { dovetail(); }
 translate([0, 50, -15]) { holder(); } 

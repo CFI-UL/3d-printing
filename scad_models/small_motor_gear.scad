@@ -18,7 +18,7 @@ echo("ratio", lg_teeth / sm_teeth);
 union() {
 
     gear(sm_teeth, circular_pitch=circular_pitch, bore_diameter=hole_diameter, rim_thickness=5, hub_thickness=5, $fn=100);
-    translate([0, 4, 0]) {
-        cube([5, 5, 10], center=true);
+    translate([0, 4, 2.5]) {
+        cube([5, 5, 5], center=true);
     }
 }

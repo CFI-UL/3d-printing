@@ -23,7 +23,7 @@ difference() {
     union() {
         gear(number_of_teeth=lg_teeth, 
         circular_pitch=circular_pitch,
-        rim_width=max_height / 3, circles=5);
+        rim_width=max_height / 3);
 
         translate([0, 0, max_height / 3 + 1 ]) {
             rotate([0, 0, 0]) {

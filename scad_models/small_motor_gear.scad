@@ -1,6 +1,6 @@
 use <mcad/involute_gears.scad>
 
-hole_diameter = 5;
+hole_diameter = 6;
 full_length = 100;
 max_height = 12;
 
@@ -18,7 +18,7 @@ echo("ratio", lg_teeth / sm_teeth);
 union() {
 
     gear(sm_teeth, circular_pitch=circular_pitch, bore_diameter=hole_diameter, rim_thickness=5, hub_thickness=5, $fn=100);
-    translate([0, 4, 2.5]) {
+    translate([0, 4.5, 2.5]) {
         cube([5, 5, 5], center=true);
     }
 }

@@ -69,7 +69,7 @@ module full_piece() {
         }
        
 
-        screw_offset = 5;
+        screw_offset = 6;
 
         // Upper left
         translate([motor_width / 2 - screw_offset, 0, 

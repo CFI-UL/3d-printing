@@ -6,13 +6,13 @@
 door_depth  = 45;
 
 // top
-top_height  = 5;
+top_height  = 4;
 
 // front
 front_depth = 5;
 
 // back  
-back_depth  = 10;
+back_depth  = 8;
     
 // module
 module_depth   = door_depth + front_depth + back_depth;
